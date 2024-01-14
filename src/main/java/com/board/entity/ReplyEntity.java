@@ -18,6 +18,7 @@ import lombok.*;
 public class ReplyEntity {
 
 	@Id
+	//@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator="REPLY_SEQ")
 	@SequenceGenerator(name = "REPLY_SEQ", sequenceName="tbl_reply_seq", initialValue=1, allocationSize=1)
 	private Long replyseqno;

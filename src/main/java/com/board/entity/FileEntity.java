@@ -19,6 +19,8 @@ import lombok.*;
 public class FileEntity {
 
 	@Id
+	//MariaDB용
+	//@GeneratedValue(strategy = GenerationType.IDENTITY)
 	//키 생성 전략 --> 오라클의 경우 시퀀스는 DB에 수동으로 생성해야 함
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator="FILE_SEQ")
 	@SequenceGenerator(name="FILE_SEQ", sequenceName="TBL_FILE_SEQ", initialValue=1, allocationSize=1)
